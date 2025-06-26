@@ -2,7 +2,7 @@
 /* Color Variables (ensure these are at the top of your style.css) */
 :root {
     --primary-color: #4A5568;
-    --background-color: #F7FAFC;
+    --background-color: #000000;
     --accent-color: #A0AEC0;
     --highlight-color: #E2E8F0;
     --cta-color: #3182CE;
@@ -698,3 +698,5 @@ textarea {
         width: 100%;
     }
 }
+
+
