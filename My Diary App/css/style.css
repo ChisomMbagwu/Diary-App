@@ -320,3 +320,106 @@ h2, h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
+
+/* Buttons */
+.button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: var(--cta-color);
+    color: var(--white-color);
+}
+
+.cta-button:hover {
+    background-color: #2b7fcb; /* Slightly darker shade */
+    transform: translateY(-1px);
+}
+
+.accent-button {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.accent-button:hover {
+    background-color: var(--highlight-color);
+}
+
+.delete-button {
+    background-color: var(--delete-red);
+    color: var(--white-color);
+}
+
+.delete-button:hover {
+    background-color: #c53030; /* Slightly darker red */
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--highlight-color);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cta-color);
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 2rem;
+}
+
+/* --- Login Screen --- */
+#login-screen {
+    text-align: center;
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#login-screen .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+}
