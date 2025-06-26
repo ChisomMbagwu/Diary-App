@@ -423,3 +423,104 @@ textarea {
     width: 100%;
     margin-top: 1rem;
 }
+
+/* --- Diary Library (Home/List View) --- */
+.library-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+#search-bar {
+    flex-grow: 1;
+    min-width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 15px;
+}
+
+.sort-filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.diary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.diary-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--highlight-color);
+    border-radius: 8px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px; /* Ensure consistent card height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+}
+
+.diary-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-color: var(--cta-color); /* Highlight on hover */
+}
+
+.diary-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.diary-card p {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Allows content to take up space */
+    overflow: hidden;
+}
+
+.diary-card .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.diary-card .actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem; /* Space between content and buttons */
+}
+
+.diary-card .actions .button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
