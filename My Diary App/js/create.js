@@ -79,6 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cancelEntryBtn.addEventListener('click', () => {
-        window.location.href = 'index.html'; // Go back to home page
+        window.location.href = 'home.html'; // Go back to home page
     });
 });
