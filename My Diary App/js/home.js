@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchAndRenderEntries() {
         const token = localStorage.getItem('authToken'); // Retrieve the token from localStorage
-        console.log(token);
+        
         if (!token) {
             showToast('You are not logged in. Please log in again.', 'error');
             setTimeout(() => {
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const responseData = await response.json();
+            console.log(responseData); 
 
             if (response.ok && responseData.status === 200) {
                 const entries = responseData.data; // Extract diary entries from the response
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     
             const responseData = await response.json();
+    // Log the response for debugging
     
             if (response.ok && responseData.status === 200) {
                 showToast('Diary entry deleted successfully!', 'success');
@@ -172,31 +174,79 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteModal.style.display = 'none'; // Hide modal
     });
 
-    // Search and Filter (Frontend implementation for mock data)
-    function applyFiltersAndSort() {
-        let entries = getMockEntries();
-        const query = searchBar.value.toLowerCase();
-        const selectedMood = filterByMood.value;
-        const sortBy = sortByDate.value;
-
-        let filteredEntries = entries.filter(entry =>
-            entry.title.toLowerCase().includes(query) ||
-            entry.content.toLowerCase().includes(query)
-        );
-
-        if (sortBy === 'newest') {
-            filteredEntries.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        } else if (sortBy === 'oldest') {
-            filteredEntries.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-        }
-
-        renderDiaryEntries(filteredEntries);
+    function convertToPureNumbers(dateString) {
+        const date = new Date(dateString);
+    
+        const year = date.getUTCFullYear();
+        const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const day = String(date.getUTCDate()).padStart(2, '0');
+        const hours = String(date.getUTCHours()).padStart(2, '0');
+        const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+    
+        return `${year}${month}${day}${hours}${minutes}${seconds}`;
     }
-
+    
+    async function applyFiltersAndSort() {
+        try {
+            const token = localStorage.getItem('authToken');
+            if (!token) {
+                showToast('You are not logged in. Please log in again.', 'error');
+                setTimeout(() => {
+                    window.location.href = 'login.html'; // Redirect to login page
+                }, 4000);
+                return;
+            }
+    
+            // Fetch entries from the API
+            const response = await fetch('https://tunga-diary-api.onrender.com/api/fullstack/diary/entries', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+    
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+    
+            let entries = await response.json();
+    
+            const query = searchBar.value.toLowerCase();
+            const sortBy = sortByDate.value;
+    
+            // Filter entries based on search query
+            let filteredEntries = entries.data.filter(entry =>
+                entry.title.toLowerCase().includes(query) || entry.content.toLowerCase().includes(query)
+            );
+    
+            // Sort entries using convertToPureNumbers
+            if (sortBy === 'newest') {
+                filteredEntries.sort((a, b) => convertToPureNumbers(b.createdAt) - convertToPureNumbers(a.createdAt));
+            } else if (sortBy === 'oldest') {
+                filteredEntries.sort((a, b) => convertToPureNumbers(a.createdAt) - convertToPureNumbers(b.createdAt));
+            }
+    
+            // Render the filtered and sorted entries
+            renderDiaryEntries(
+                filteredEntries.map(entry => ({
+                    ...entry,
+                    formattedDate: formatDate(entry.createdAt), // Format the date for display
+                }))
+            );
+        } catch (error) {
+            console.error('Error fetching diary entries:', error);
+            showToast('An error occurred while fetching diary entries.', 'error');
+        }
+    }
+    
+    // Event listeners
     searchBar.addEventListener('input', applyFiltersAndSort);
     sortByDate.addEventListener('change', applyFiltersAndSort);
     
 
+    
     // Initial load
     fetchAndRenderEntries();
 });
