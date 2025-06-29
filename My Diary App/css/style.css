@@ -1,7 +1,7 @@
 /* Color Variables */
 /* Color Variables (ensure these are at the top of your style.css) */
 :root {
-    --primary-color: #4A5568;
+    --primary-color: #FF90BB
     --background-color: #000000;
     --accent-color: #A0AEC0;
     --highlight-color: #E2E8F0;
@@ -9,6 +9,7 @@
     --white-color: #FFFFFF;
     --delete-red: #E53E3E;
 }
+
 
 /* Base Styles (ensure these are at the top of your style.css) */
 body {
@@ -24,6 +25,17 @@ body {
     min-height: 100vh;
 }
 
+body.dark-mode {
+    --primary-color: #63B3ED; /* Soft blue */
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --accent-color: #4A5568;
+    --highlight-color: #2D3748;
+    --cta-color: #63B3ED;
+    --white-color: #1A202C;
+    --delete-red: #FC8181;
+}
+
 #app {
     max-width: 960px; /* Max width for the app content */
     width: 100%;
@@ -34,6 +46,15 @@ body {
     display: flex;
     flex-direction: column;
     margin: 2rem auto; /* Centers the main app container on larger screens */
+}
+#dark-mode-toggle{
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /* Landing Page */
