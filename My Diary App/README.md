@@ -70,13 +70,13 @@ Follow these steps to get MemoryNest up and running on your local machine for de
 
 1.  **Clone the Repository (if using Git):**
     ```bash
-    git clone https://github.com/ChisomMbagwu/Diary-App.git
+    https://github.com/ChisomMbagwu/Diary-App.git
     ```
     If not using Git, you can simply download the project ZIP file and extract it.
 
 2.  **Navigate to the Project Directory:**
     ```bash
-    cd memorynest-project
+    cd ChisomMbagwu/Diary-App
     ```
 
 3.  **Open in Browser:**
@@ -89,17 +89,20 @@ Follow these steps to get MemoryNest up and running on your local machine for de
 
 ## Project Structure
 
-memorynest-project/
-├── index.html          <-- The main landing page
-├── home.html            <-- The main diary library page (Home)
+```
+my diary app/
+├── landing.html          <-- The main landing page
+├── index.html            <-- The main diary library page (Home)
 ├── login.html            <-- User login page
 ├── create.html           <-- Page for adding new diary entries
 ├── view.html             <-- Page for viewing a single diary entry
 ├── css/
 │   └── style.css         <-- All application styles
 └── js/
-├── common.js         <-- Shared utility functions (e.g., showToast, formatDate)
-├── landing.js        <-- Script for landing page interactions
-├── login.js          <-- Script for login page functionality
-├── home.js           <-- Script for diary library (fetching, deleting, sorting, filtering, edit modal)
-├── create.js         <-- Script for creating new entries
+    ├── common.js         <-- Shared utility functions (e.g., showToast, formatDate)
+    ├── landing.js        <-- Script for landing page interactions
+    ├── login.js          <-- Script for login page functionality
+    ├── home.js           <-- Script for diary library (fetching, deleting, sorting, filtering, edit modal)
+    ├── create.js         <-- Script for creating new entries
+    └── view.js           <-- Script for viewing a single entry in detail
+```
