@@ -1,7 +1,5 @@
 # MemoryNest - Your Digital Diary
 
-! https://via.placeholder.com/800x400?text=MemoryNest+App+Screenshot](https://imgur.com/mjy11Ji))
-
 ## Table of Contents
 
 - [About MemoryNest](#about-memorynest)
@@ -15,7 +13,7 @@
 
 ## About MemoryNest
 
-MemoryNest is a modern, intuitive digital diary application designed to help users capture, organize, and reflect on their daily thoughts and experiences. It provides a calm and minimalist interface for a distraction-free journaling experience, allowing you to easily create, view, update, and delete your personal entries.
+MemoryNest is your private digital diary, designed to help you capture and cherish life's moments. Easily record your thoughts, experiences, and reflections in a secure and personal space. It's more than just a diary; it's a growing collection of your memories, always accessible, helping you build a rich, personal history.
 
 ## Features
 
@@ -31,7 +29,7 @@ MemoryNest is a modern, intuitive digital diary application designed to help use
 ## Live Demo
 
 You can access a live version of the MemoryNest application here:
-[https://your-netlify-site-name.netlify.app](https://your-netlify-site-name.netlify.app)
+[https://chisom-diaryapp.netlify.app)
 
 ## Technologies Used
 
@@ -72,7 +70,7 @@ Follow these steps to get MemoryNest up and running on your local machine for de
 
 1.  **Clone the Repository (if using Git):**
     ```bash
-    git clone [https://github.com/your-username/memorynest-project.git](https://github.com/your-username/memorynest-project.git)
+    git clone https://github.com/ChisomMbagwu/Diary-App.git
     ```
     If not using Git, you can simply download the project ZIP file and extract it.
 
@@ -92,8 +90,8 @@ Follow these steps to get MemoryNest up and running on your local machine for de
 ## Project Structure
 
 memorynest-project/
-├── landing.html          <-- The main landing page
-├── index.html            <-- The main diary library page (Home)
+├── index.html          <-- The main landing page
+├── home.html            <-- The main diary library page (Home)
 ├── login.html            <-- User login page
 ├── create.html           <-- Page for adding new diary entries
 ├── view.html             <-- Page for viewing a single diary entry
@@ -105,4 +103,3 @@ memorynest-project/
 ├── login.js          <-- Script for login page functionality
 ├── home.js           <-- Script for diary library (fetching, deleting, sorting, filtering, edit modal)
 ├── create.js         <-- Script for creating new entries
-└── view.js           <-- Script for viewing a single entry in detail
