@@ -1,7 +1,6 @@
 # MemoryNest - Your Digital Diary
 
-![MemoryNest Screenshot Placeholder](https://via.placeholder.com/800x400?text=MemoryNest+App+Screenshot)
-*Replace this with an actual screenshot of your application.*
+![MemoryNest Screenshot Placeholder]([https://via.placeholder.com/800x400?text=MemoryNest+App+Screenshot](https://imgur.com/mjy11Ji))
 
 ## Table of Contents
 
