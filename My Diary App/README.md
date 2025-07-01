@@ -13,7 +13,7 @@
 
 ## About MemoryNest
 
-MemoryNest is your private digital diary, designed to help you capture and cherish life's moments. Easily record your thoughts, experiences, and reflections in a secure and personal space. It's more than just a diary; it's a growing collection of your memories, always accessible, helping you build a rich, personal history.
+MemoryNest is a private digital diary, designed to help you capture and cherish life's moments. It's more than just a diary; it's a growing collection of your memories.
 
 ## Features
 
@@ -33,14 +33,14 @@ You can access a live version of the MemoryNest application here:
 
 ## Technologies Used
 
-MemoryNest is built using a modern frontend stack with a focus on simplicity and performance:
+MemoryNest was built using:
 
-* **HTML5:** For structuring the web content.
-* **CSS3:** For styling and ensuring a responsive, aesthetically pleasing user interface.
-* **JavaScript (Vanilla JS):** For all client-side logic, API interactions, and dynamic content manipulation without reliance on heavy frameworks.
+* **HTML5
+* **CSS3
+* **JavaScript (Vanilla JS)
 * **Google Fonts:**
-    * **Playfair Display:** For headings and titles, providing an elegant, classic feel.
-    * **Inter:** For body text and UI elements, ensuring readability and a modern look.
+    * **Playfair Display:** For headings and titles.
+    * **Inter:** For body text and UI elements.
 
 ## API Configuration
 
