@@ -68,17 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'index.html';
         }, 500);
     });
-
-    entryForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const newEntry = {
-            title: entryTitleInput.value,
-            content: entryContentTextarea.value,
-        };
-        createEntry(newEntry);
-    });
-
-    cancelEntryBtn.addEventListener('click', () => {
-        window.location.href = 'home.html'; // Go back to home page
-    });
 });
