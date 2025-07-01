@@ -48,5 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', toggleDarkMode);
+
     }
+    const homeButton = document.getElementById('home');
+if (homeButton) {
+    homeButton.addEventListener('click', () => {
+        window.location.href = 'home.html';
+    });
+}
+
+const landingButton = document.getElementById('landing-page');
+if (landingButton) {
+    landingButton.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+}
 });
+// Add event listener to navigate to home.html when the element with id 'home' is clicked
