@@ -35,9 +35,9 @@ You can access a live version of the MemoryNest application here:
 
 MemoryNest was built using:
 
-* **HTML5
-* **CSS3
-* **JavaScript (Vanilla JS)
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
 * **Google Fonts:**
     * **Playfair Display:** For headings and titles.
     * **Inter:** For body text and UI elements.
