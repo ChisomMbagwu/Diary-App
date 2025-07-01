@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-
+        // Show loader
+        const loader = document.getElementById('loader');
+        loader.style.display = 'block';
+        document.getElementById('login-text').style.visibility = 'hidden';
         if (email && password) {
             try {
                 // Send login credentials to API
