@@ -91,8 +91,8 @@ Follow these steps to get MemoryNest up and running on your local machine for de
 
 ```
 my diary app/
-├── landing.html          <-- The main landing page
-├── index.html            <-- The main diary library page (Home)
+├── index.html          <-- The main landing page
+├── home.html            <-- The main diary library page (Home)
 ├── login.html            <-- User login page
 ├── create.html           <-- Page for adding new diary entries
 ├── view.html             <-- Page for viewing a single diary entry
@@ -100,7 +100,6 @@ my diary app/
 │   └── style.css         <-- All application styles
 └── js/
     ├── common.js         <-- Shared utility functions (e.g., showToast, formatDate)
-    ├── landing.js        <-- Script for landing page interactions
     ├── login.js          <-- Script for login page functionality
     ├── home.js           <-- Script for diary library (fetching, deleting, sorting, filtering, edit modal)
     ├── create.js         <-- Script for creating new entries
